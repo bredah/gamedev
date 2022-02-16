@@ -1,21 +1,15 @@
 # GameDev
 
-
-- [GameDev](#gamedev)
-  - [Project details](#project-details)
-    - [Technical](#technical)
-    - [Dependencies](#dependencies)
-  - [Testing](#testing)
-    - [Coverage](#coverage)
+- [Project details](#project-details)
+  - [Technical](#technical)
+  - [Dependencies](#dependencies)
+- [play the game](#play-the-game)
+- [Testing](#testing)
+  - [Coverage](#coverage)
 
 ## Project details
 
-2D game (side scroll), with linear map, with linear map defined by 0 and 1, where:
-
-- 0 the floor
-- 1 jumping object
-
-Example: `00010001001010`
+A storytelling game, where an imaginary world with 3 randomly generated locations featuring fantastic animals and an excellent script.
 
 ### Technical
 
@@ -36,6 +30,16 @@ dotnet list package
 Output:
 
 ![command used to list all packages](doc/img/dotnet-list-packages.png)
+
+## play the game
+
+> Remember to download the project's dependencies before starting it, using the command: `dotnet restore` 
+
+Using the command below to start the game:
+
+```sh
+dotnet run --projec Example                                       
+```
 
 ## Testing
 
@@ -73,3 +77,13 @@ Output:
 ![commands used to generate the coverage report](doc/img/dotnet-test-coverage.gif)
 
 > For more details about how to generate test coverage report, access the official Microsoft [documentation](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=linux).
+
+The project presents the following coverage:
+
+- Console
+
+![console display the coverage report](doc/img/coverage-console.png)
+
+- HTML
+
+![page display the coverage report](doc/img/coverage-html.png)

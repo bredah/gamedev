@@ -1,24 +1,31 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace gamedev
 {
 
-    static class Engine
+  public static class Engine
+  {
+    public static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Start\n");
-            var worldMap = WorldMap.generateWorlds();
-            for (int i = 0; i < worldMap.Count; i++)
-            {
-                Console.WriteLine("World " + (i + 1).ToString());
-                Console.WriteLine("Map - " + worldMap[i] + "\n");
-
-            }
-
-            Console.ReadKey(true);
-            Console.WriteLine("Finish");
-        }
+      MainAsync().GetAwaiter().GetResult();
     }
+
+    public static async Task MainAsync()
+    {
+      Console.WriteLine("\nStart of a dumb game\n");
+      var worldMap = await WorldGame.generateRandomWorld();
+
+      Console.WriteLine("\nStart the history\n");
+
+      for (int i = 0; i < worldMap.Count; i++)
+      {
+        Console.WriteLine("World " + (i + 1).ToString());
+        await Dialog.TellHistoryAsync(worldMap[i]);
+      }
+
+      Console.WriteLine("\nFinish");
+    }
+  }
 }
