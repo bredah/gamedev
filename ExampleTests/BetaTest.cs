@@ -8,9 +8,9 @@ namespace gamedev
         [TestMethod]
         public void dumb()
         {
-            CharacterMoves.Walk(Direction.FOWARD);
+            CharacterMoves.Walk(Direction.LEFT);
             Sound.Muted = true;
-            CharacterMoves.Walk(Direction.FOWARD);
+            CharacterMoves.Walk(Direction.RIGHT);
         }
     }
 }

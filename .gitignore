@@ -6,3 +6,10 @@ obj/
 # Common node modules locations
 /node_modules
 /wwwroot/node_modules
+
+# Test Results
+TestResults/
+
+# Coverage report
+*.cobertura.xml
+coveragereport/

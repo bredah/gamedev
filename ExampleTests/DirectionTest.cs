@@ -6,8 +6,6 @@ namespace gamedev
     public class DirectionTest
     {
         [DataTestMethod]
-        [DataRow(Direction.FOWARD, "foward")]
-        [DataRow(Direction.BACK, "back")]
         [DataRow(Direction.LEFT, "left")]
         [DataRow(Direction.RIGHT, "rigth")]
         public void ShouldPresentContent(Direction currentValue, string expectedValue)
